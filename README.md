@@ -11,9 +11,9 @@ ML-специалист: Сивов Богдан
 ML-специалист: Томилов Лев
 
 
-# location-service
+# location-service / route-service
 
-Сервис, отвечающий за хранение информации о такси, расписании и причалах
+Более специфично смотрите здесь: [Route Service](https://github.com/hack-mos/backend-route-service), [Location Service](https://github.com/hack-mos/backend-location-service)
 
 ## Общая инструкция
 
