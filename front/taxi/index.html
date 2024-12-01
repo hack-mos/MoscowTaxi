@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoscowTaxi by Leko</title>
+    <link rel="stylesheet" type="text/css" href="styles/header.css">
+    <link rel="stylesheet" type="text/css" href="styles/heropage.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
+
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=3f45c0f4-e42a-443b-815e-0a8791762fb3&lang=ru_RU" type="text/javascript"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="header-logo">
+                <img src="images/icon.png" alt="">
+                <p>Leko</p>
+            </div>
+            <div class="header-list">
+                <ul class="list-ul">
+                    <a class="help" href="mailto:hello@gmail.com?subject=Нужна%20помощь!" target="_blank" rel="nofollow" aria-label="Leko" title="Leko"><li>Наша поддержка</li></a>
+                    <a class="drivers" href="driver.html"><li>Для водителей</li></a>
+                    <a class="admins" href="login.html"><li>Для администраторов</li></a>
+                    <a class="system" href="login.html"><li>Войти в систему</li></a>
+                </ul>
+            </div>
+            <div class="burger-icon" id="burger-icon">
+                <img src="images/burger-menu.png" style="width: 3vh; height: 3vh;" alt="">
+            </div>
+            <div class="close-icon" id="close-icon" style="display: none;">
+                <img src="images/close.png" alt="">
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobile-menu" style="display: none;">
+            <ul class="list-ul">
+                <a href="#"><li>Наша поддержка</li></a>
+                <a href="driver.html"><li>Для водителей</li></a>
+                <a href="login.html"><li>Для администраторов</li></a>
+                <a href="login.html"><li>Войти в систему</li></a>
+            </ul>
+        </div>
+    </header>
+    <heropage class="heropage">
+        <div class="heropage-container">
+            <div class="heropage-main">
+                <h1>Речное <span> шеринг</span> такси</h1>
+            </div>
+            <div class="left-right-container">
+                <div class="hero-left">
+                    <div class="hero-left-paragraph">
+                        <p>Удобный заказ <br> речного шеринг<br>такси</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="#section1"><button class="btn1">Заказать такси</button></a>
+                        <a  href="mailto:hello@gmail.com?subject=Нужна%20помощь!" target="_blank" rel="nofollow" aria-label="Leko" title="Leko"><button class="btn2">Обратиться в поддержку</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </heropage>
+    <main>
+        <div class="map" id="map" style="width:100%;height: 650px;"></div>
+        <div class="print-marsh" id="section1">
+            <div class="labels">
+                <label>Начало маршрута: <input class="input1" id="startPoint" placeholder="55.76, 37.64"></label><br>
+                <label>Конец маршрута: <input class="input2" id="endPoint" placeholder="55.80, 37.70"></label><br>
+            </div>
+            <div class="buttons">
+                <button class="btn1" id="buildRoute">Построить маршрут</button>
+                <button class="btn1" id="startTaxi">Заказать такси</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function startTracking() {
+            const orderId = document.getElementById("orderId").value;
+            if (orderId) {
+                fetchRoute(orderId); // Вызов fetchRoute с введенным ID заказа
+            } else {
+                alert("Введите ID заказа!");
+            }
+        }
+
+        document.getElementById('burger-icon').addEventListener('click', function() {
+    document.getElementById('mobile-menu').style.display = 'flex';
+    this.style.display = 'none'; // Скрыть бургер-меню
+    document.getElementById('close-icon').style.display = 'block'; // Показать кнопку закрытия
+});
+
+document.getElementById('close-icon').addEventListener('click', function() {
+    document.getElementById('mobile-menu').style.display = 'none';
+    document.getElementById('burger-icon').style.display = 'block'; // Показать бургер-меню
+    this.style.display = 'none'; // Скрыть кнопку закрытия
+});
+
+
+    </script>
+</body>
+</html>

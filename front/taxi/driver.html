@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="driver-style/heropage.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="driver-style/herader.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
+    <title>Для водителей</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <a href=""></a>
+                <img src="images/icon.png" alt="">
+                <p>Leko</p>
+            </div>
+            <div class="header-list">
+                <ul class="list-ul">
+                    <a class="help" href="mailto:hello@gmail.com?subject=Нужна%20помощь!" target="_blank" rel="nofollow" aria-label="Leko" title="Leko"><li>Наша поддержка</li></a>
+                    <a class="drivers" href="index.html"><li>Для пассажиров</li></a>
+                    <a class="admins" href="#"><li>Для администраторов</li></a>
+                    <a class="system" href="driverlogin.html"><li>Войти в систему</li></a>
+                </ul>
+            </div>
+            <div class="burger-icon" id="burger-icon">
+                <img src="images/burger-menu.png" style="width: 3vh; height: 3vh;" alt="">
+            </div>
+            <div class="close-icon" id="close-icon" style="display: none;">
+                <img src="images/close.png" alt="">
+            </div>
+            <div class="mobile-menu" id="mobile-menu" style="display: none;">
+                <ul class="list-ul">
+                    <a href="#"><li>Наша поддержка</li></a>
+                    <a href="index.html"><li>Для пассажиров</li></a>
+                    <a href="#"><li>Для администраторов</li></a>
+                    <a href="login.html"><li>Войти в систему</li></a>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <heropage>
+        <div class="heropage-container">
+            <div class="heropage-main">
+                <h1>Стать <span> водителем </span> в речном <span> шеринг</span> такси проще чем кажется</h1>
+            </div>
+            <div class="left-right-container">
+                <div class="hero-left">
+                    <div class="hero-left-paragraph">
+                        <p>Быстрая регистрация <br> водителя <br> речного шеринг такси</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="driverregister.html"><button class="btn1">Создать аккаунт водителя</button></a>
+                        <a href="mailto:hello@gmail.com?subject=Нужна%20помощь!" target="_blank" rel="nofollow" aria-label="Leko" title="Leko"><button class="btn2">Обратиться в поддержку</button></a>
+                    </div>
+                </div>
+            </div>
+    </heropage>
+    <script>
+        document.getElementById('burger-icon').addEventListener('click', function() {
+        document.getElementById('mobile-menu').style.display = 'flex';
+        this.style.display = 'none'; // Скрыть бургер-меню
+        document.getElementById('close-icon').style.display = 'block'; // Показать кнопку закрытия
+    });
+
+        document.getElementById('close-icon').addEventListener('click', function() {
+        document.getElementById('mobile-menu').style.display = 'none';
+        document.getElementById('burger-icon').style.display = 'block'; // Показать бургер-меню
+        this.style.display = 'none'; // Скрыть кнопку закрытия
+    });
+
+
+    </script>
+</body>
+</html>
