@@ -1,0 +1,16 @@
+﻿body{
+    font-family: Mons;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.col-md-12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form-group{
+    font-family: Mons;
+}

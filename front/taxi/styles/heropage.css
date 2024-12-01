@@ -1,0 +1,162 @@
+﻿.heropage{
+    display: flex;
+/*     background-image: url(../images/wallone.jpg); */
+/*     background: #222e4d; */
+
+    background: #151f3f;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 100px;
+}
+.left-right-container{
+    display: flex;
+    justify-content:space-between;
+    margin-top: 10vh;
+    top: 7vh;
+    position: relative;
+}
+.heropage-main h1{
+    font-size: 12vh;
+    color: #fff;
+    font-family: Mons;
+}
+.heropage-main h2{
+    font-size: 7vh;
+    color: #fff;
+    font-family: Mons;
+    display: flex;
+    justify-content: center;
+}
+.heropage-main{
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    margin-top: 10vh;
+}
+.heropage-main span{
+    color:rgb(185, 24, 24);
+}
+.hero-left{
+    position: relative;
+    color: #fff;
+}
+.hero-left-paragraph{
+    font-size: 4vh;
+    position: relative;
+    font-weight: bold;
+}
+.hero-left-paragraph span{
+    color: var(--color-what);
+}
+.buttons{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+}
+.buttons button{
+    width: 20vh;
+    height: 5vh;
+    margin-top: 4vh;
+}
+.btn1:hover,
+.btn2:hover{
+    background-color: #fff;
+    color: black;
+    transition: 0.5s ease; 
+    cursor: pointer;
+}
+.btn1:active,
+.btn2:active{
+    background-color: hsl(240, 8%, 93%);
+    color: #fff;
+    box-shadow: rgb(231, 228, 236) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+.btn1:not(:hover),
+.btn2:not(:hover){
+    transition: 0.5s ease;
+}
+.btn1{
+    color: #fff;/* 
+    background-color: rgb(33, 40, 40); */
+    background: rgba(123, 150, 232, .15);
+    font-weight: bold;
+    font-family: Mons;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.4vh;
+    margin-right: 15px;
+}
+.btn2{
+    color: #fff;
+    font-size: 1.4vh;
+    border-color: rgb(4, 19, 19);
+    background: transparent;
+    font-weight: bold;
+    border: 1px solid #222e4d;
+    font-family: Mons;
+}
+.hero-right{
+    padding-left: 10px;
+    position: relative;
+    align-items: flex-end;
+    display: flex;
+    gap: 15px;
+}
+.hero-right img{
+    width: 3.5vh;
+    height: 3.5vh;
+}
+@media screen and (max-width: 798px){
+    .heropage-main{
+        margin: 0;
+    }
+    .heropage{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .heropage-main h1{
+        font-size: 4vh;
+        justify-content: center;
+        display: flex;
+    }
+    .heropage-main span{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .heropage-main h2{
+        font-size: 3vh;
+    }
+    .btn1,.btn2{
+        font-size: 1.6vh;
+    }
+    .buttons button{
+        width: 150px;
+        height: 45px;
+        margin-top: 4vh;
+    }
+    .hero-left-paragraph{
+        font-size: 6vh;
+        margin-top: 10px;
+    }
+    .left-right-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-left-paragraph p{
+        font-size: 30px;
+        text-align: center;
+        justify-content: center;
+    }
+    .hero-right{
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
+}

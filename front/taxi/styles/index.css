@@ -1,0 +1,17 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    font-family: Mons;
+}
+:root{
+/*     --color-what: rgb(35, 59, 44); */
+    --color-what:#222e4d;
+}
+
+@font-face {
+    font-family: Mons;
+    src: url(../fonts/Montserrat-VariableFont_wght\ —\ копия\ —\ копия.ttf);
+}
+html {
+    scroll-behavior: smooth;
+  }

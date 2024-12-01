@@ -1,0 +1,64 @@
+﻿main{
+    background: #151f3f;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column-reverse;
+}
+main .map{
+    display: flex;
+    margin-bottom: 10vh;
+}
+.print-marsh{
+/*     display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.labels{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: Mons;
+    font-size: 3vh;
+    font-weight:bold;
+    gap: 30px;
+}
+.input1,
+.input2{
+    margin-left: 20px;
+}
+
+.labels input{
+    border: none;
+    border-radius: 5px;
+    width: 20vh;
+    height: 4vh;
+}
+.buttons{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 798px) {
+    .labels{
+        font-size: 2.5vh;
+        margin-bottom: 10px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .labels input{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 4px; 
+        display: grid;
+    }
+    
+
+}

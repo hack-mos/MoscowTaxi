@@ -1,0 +1,120 @@
+﻿.header{
+    margin-top: 30px;
+    position: absolute;
+    height: 7vw;
+    z-index: 999;
+    width: 100%;
+    color: #fff;
+    font-family: Mons;
+}
+.header-container{
+    display: flex;
+    font-size: 2.5vh;
+    justify-content: space-between;
+    padding: 0 100px;
+    align-items: center;
+    background: transparent;
+}
+.header-logo{
+    display: flex;
+    text-align: center;
+}
+.header-logo p{
+    display: flex;
+    align-items: center;
+}
+.header-logo img{
+    width: 4vh;
+}
+.header-list ul{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.list-ul .help::after,
+.drivers::after,
+.admins::after,
+.system::after{
+    content: '';
+    display: block;
+    bottom: -1px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: rgb(189, 181, 181);
+    transition: width 0.5s ease;
+}
+
+.help:hover:after,
+.drivers:hover:after,
+.admins:hover:after,
+.system:hover:after{
+	content: "";
+    width: 100%;
+    left: 0;
+    height: 2px; 
+    background-color: rgb(176, 107, 107); 
+    transition: width 0.5s ease; 
+}
+     
+
+.burger-icon{
+    display: none;
+}
+.list-ul a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.burger-icon, .close-icon {
+    cursor: pointer;
+    width: 3vh;
+    height: 3vh;
+}
+
+@media screen and (max-width: 798px) {
+    .header-container{
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+    }
+    .header-list{
+        display: none;
+    }
+    .burger-icon{
+        display: flex;
+        width: 30px;
+        height: 30px;
+    } 
+    .header-logo img {
+        margin-right: 10px;   
+    }
+
+    .mobile-menu {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background: #151f3f;/* Цвет фона меню */
+    }
+    .list-ul{
+        list-style: none;
+        gap: 35px;
+        font-size: 23px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .burger-icon, .close-icon {
+        cursor: pointer;
+        width: 3vh;
+        height: 3vh;
+    }
+    .close-icon img{
+        width: 3vh;
+        height: 3vh;
+    }
+
+    
+}
